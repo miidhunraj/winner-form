@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Giveaway Winner Claim Form</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head><body><div class="wrap">
+<div class="brand"><i>🎁</i> Giveaway Team</div>
+<main class="card">
+<section id="formView">
+  <header class="hero">
+    <h1>🎉 Giveaway Winner Claim Form</h1>
+    <p>Congratulations! You’ve been selected as one of our winners. Please complete the form below so we can verify your details and arrange your giveaway reward.</p>
+    <div class="trust">Your information will only be used for giveaway verification and winner communication.</div>
+  </header>
+  <div class="progress"><span id="progText">0 of 7 required items complete</span><div class="bar"><b id="progBar"></b></div></div>
+  <form id="form" novalidate autocomplete="on">
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <fieldset><legend>Winner information</legend>
+      <div class="field"><label for="fullName">Full Name <span class="req">*</span></label><input id="fullName" name="fullName" autocomplete="name" placeholder="Enter your full name"><div class="err"></div></div>
+      <div class="field"><label for="email">Email Address <span class="req">*</span></label><input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="Enter your email address"><div class="err"></div></div>
+      <div class="row">
+        <div class="field"><label for="primaryMobile">Primary Mobile Number <span class="req">*</span></label><input id="primaryMobile" name="primaryMobile" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national" placeholder="Enter your 10-digit mobile number"><div class="err"></div></div>
+        <div class="field"><label for="backupMobile">Backup Number <span class="opt">(Optional)</span></label><input id="backupMobile" name="backupMobile" type="tel" inputmode="numeric" maxlength="10" placeholder="Enter an alternative mobile number"><div class="err"></div></div>
+      </div>
+    </fieldset>
+    <fieldset><legend>Basic details</legend>
+      <div class="row">
+        <div class="field"><label for="age">Age</label><input id="age" name="age" type="number" inputmode="numeric" min="13" max="100" placeholder="Your age"><div class="err"></div></div>
+        <div class="field"><label for="gender">Gender</label><select id="gender" name="gender"><option value="">Select</option><option>Male</option><option>Female</option><option>Prefer not to say</option><option>Other</option></select><div class="err"></div></div>
+        <div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" placeholder="Enter your city"><div class="err"></div></div>
+        <div class="field"><label for="state">State</label><select id="state" name="state"><option value="">Select state</option></select><div class="err"></div></div>
+      </div>
+      <div class="field"><label for="country">Country</label><input id="country" name="country" value="India" autocomplete="country-name"><div class="err"></div></div>
+    </fieldset>
+    <fieldset><legend>Giveaway details</legend>
+      <div class="field"><label for="campaign">Giveaway / Campaign Name <span class="req">*</span></label><input id="campaign" name="campaign" placeholder="Which giveaway did you win?"><div class="err"></div></div>
+      <div class="field"><label for="winnerUsername">Winner Username</label><input id="winnerUsername" name="winnerUsername" placeholder="@username" autocapitalize="none"><p class="sub" style="margin:5px 0 0">Enter the username used during the giveaway. Never share your password.</p><div class="err"></div></div>
+      <div class="row">
+        <div class="field"><label for="platform">Social Media Platform</label><select id="platform" name="platform"><option value="">Select</option><option>Instagram</option><option>YouTube</option><option>Facebook</option><option>X</option><option>Other</option></select><div class="err"></div></div>
+        <div class="field"><label for="social">Username / Profile Link <span class="opt">(Optional)</span></label><input id="social" name="social" autocapitalize="none" placeholder="Enter your username or profile link"><div class="err"></div></div>
+      </div>
+    </fieldset>
+    <fieldset><legend>Reward Delivery Details</legend>
+      <div class="field" id="g-contactMethod"><span class="lbl">Preferred Contact Method <span class="req">*</span></span>
+        <div class="pills"><label><input type="radio" name="contactMethod" value="WhatsApp"><span>WhatsApp</span></label><label><input type="radio" name="contactMethod" value="Phone Call"><span>Phone Call</span></label><label><input type="radio" name="contactMethod" value="Email"><span>Email</span></label></div><div class="err"></div></div>
+      <div class="field"><span class="lbl">Preferred Contact Time</span>
+        <div class="pills"><label><input type="radio" name="contactTime" value="Morning"><span>Morning</span></label><label><input type="radio" name="contactTime" value="Afternoon"><span>Afternoon</span></label><label><input type="radio" name="contactTime" value="Evening"><span>Evening</span></label><label><input type="radio" name="contactTime" value="Anytime"><span>Anytime</span></label></div></div>
+      <div class="field"><label for="notes">Delivery / Communication Notes <span class="opt">(Optional)</span></label><textarea id="notes" name="notes" maxlength="500" placeholder="Anything we should know about contacting you?"></textarea></div>
+    </fieldset>
+    <fieldset><legend>Verification</legend>
+      <div id="g-verified"><label class="check"><input type="checkbox" name="verified"><span>I confirm that the information provided above is accurate and belongs to me.</span></label><div class="err"></div></div>
+      <div id="g-consent"><label class="check"><input type="checkbox" name="consent"><span>I understand that the information I provide will be used only for giveaway verification and winner communication.</span></label><div class="err"></div></div>
+    </fieldset>
+    <div class="banner" id="banner" hidden role="alert"></div>
+    <div class="actions"><button class="btn" id="submit" type="submit">Claim My Giveaway Reward 🎁</button></div>
+  </form>
+</section>
+<section id="doneView" class="success" hidden>
+  <svg class="tick" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45"/><path d="M30 52l14 14 27-30"/></svg>
+  <h2>🎉 Details Submitted Successfully!</h2>
+  <p>Your winner information has been received successfully. We’ll contact you using the details you provided after verification.</p>
+  <div class="sid">Submission ID: <span id="sid"></span></div><br>
+  <button class="btn" id="done" style="max-width:240px">Done</button>
+</section>
+</main>
+<footer class="foot"><b>Giveaway Winner Verification</b>We only request information necessary to verify your winner status and contact you about your reward. Never share passwords, OTPs, PINs, or banking credentials through this form.<br><br>© 2026 Giveaway Team</footer>
+</div><script src="/form.js"></script></body></html>

@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Winners · Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css"></head><body><div class="wrap admin">
+<div class="brand"><i>🎁</i> Giveaway winners</div>
+<div class="stats" id="stats"></div>
+<div class="tools"><input id="search" type="search" placeholder="Search name, email, phone, giveaway"><select id="filter"><option value="">All statuses</option></select><a href="/api/giveaway/export">Download .xlsx</a></div>
+<div class="tablewrap"><table><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Giveaway</th><th>Status</th><th>Submitted</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+<dialog id="dlg"><h3 id="dTitle" style="margin:0"></h3><dl id="dBody"></dl><button class="btn" style="min-height:46px" id="dClose">Close</button></dialog>
+</div><script src="/admin.js"></script></body></html>
